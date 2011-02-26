@@ -35,8 +35,8 @@ public class AtomContainerToNgraph {
         NVertex<GraphInput.InputData> vertexPrototype = new ListVertex<GraphInput.InputData>();
 
         for (IBond bond : mol.bonds()) {
-            String atom1 = String.valueOf(bond.getAtom(0).hashCode());
-            String atom2 = String.valueOf(bond.getAtom(1).hashCode());
+            String atom1 = String.valueOf(mol.getAtomNumber(bond.getAtom(0)));
+            String atom2 = String.valueOf(mol.getAtomNumber(bond.getAtom(1)));
 
 
             NVertex<GraphInput.InputData> v1, v2;
